@@ -73,6 +73,8 @@ namespace Echoglossian
 
       string finalDialogueText = this.translator.Translate(parsedText, sourceLanguage, targetLanguage);
 
+      finalDialogueText = finalDialogueText.Replace("a", "x");
+
       finalDialogueText = !string.IsNullOrEmpty(startingEllipsis)
           ? startingEllipsis + finalDialogueText
           : finalDialogueText;
